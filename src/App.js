@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header';
 import Circle from './Components/Circle';
 import Button from './Components/Button';
 import Overlay from './Components/Overlay';
@@ -48,8 +49,10 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Header/>
         <Circle/>
         <Button/>
+        <Overlay/>
       </div>
     );
   }
