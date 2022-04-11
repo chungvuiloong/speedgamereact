@@ -1,16 +1,16 @@
 const Circle = () => {
     return (
-        <div>
-            <div>
+        <div name="circles">
+            <div name="circle">
                 Circle
             </div>
-            <div>
+            <div name="circle">
                 Circle
             </div>
-            <div>
+            <div name="circle">
                 Circle
             </div>
-            <div>
+            <div name="circle">
                 Circle
             </div>
         </div>

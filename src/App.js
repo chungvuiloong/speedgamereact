@@ -3,15 +3,58 @@ import './App.css';
 import Circle from './Components/Circle';
 import Button from './Components/Button';
 import Overlay from './Components/Overlay';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <Circle/>
-      <Button/>
-      <Overlay/>
-    </div>
-  );
+class App extends Component {
+  state = {
+    counter: 0,
+  };
+
+
+
+  // counter +1 
+  // coounter
+
+ 
+
+
+
+
+  render() {
+    const circles = document.querySelectorAll(".circle");
+
+    const getRndInt = (min, max) => {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    // circles.forEach((circle, i) => {
+    //   circle.addEventListener("click", () => clickedCircle(i));
+    // });
+
+    // const clickedCircle = (i) => {
+    //   // i += 1;
+    //   console.log("circle was clicked", i);
+    //   bump.play();
+    
+    //   if (i !== active) {
+    //     endGame();
+    //   } else {
+    //     score++;
+    //     rounds--;
+    
+    //     scoreText.textContent = score;
+    //   }
+    // };
+
+    return (
+      <div className="App">
+        <Circle/>
+        <Button/>
+      </div>
+    );
+  }
+
+
 }
 
 export default App;
