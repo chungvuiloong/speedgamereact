@@ -8,38 +8,38 @@ import React, { Component } from "react";
 class App extends Component {
   state = {
     value: '',
+    name:'',
     counter: 0,
+    
   };
   // counter +1 
   // coounter
-
-  render() {
-    
-
-    const getRndInt = (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
-
-    const startGame = () => {
+   startGame = () => {
     console.log("game started");
     }
 
-    const endGame = () => {
+     endGame = () => {
       console.log("game Ended");
       }
 
-    const clickHandler = (e) => {
-      console.log("Button is clicked", e.target.value);
+     clickHandler = (e) => {
+      console.log("Button is clicked", e.target.value, e.target.name);
       this.setState({
-        value: e.target.value
+        [e.target.name]: e.target.value
       })
     };
+
+  render() {
+    // this.clickHandler = this.clickHandler.bind(this);
+
+    
+ 
 
     return (
       <div className="App">
         <Header score={this.state.score}/>
-        <Circle onClick={clickHandler}/>
-        <Button startGame={startGame} endGame={endGame}/>
+        <Circle onClick={this.clickHandler}/>
+        <Button startGame={this.startGame} endGame={this.endGame}/>
         <Overlay/>
       </div>
     );
