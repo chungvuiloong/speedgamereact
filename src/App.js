@@ -3,14 +3,11 @@ import Header from './Components/Header';
 import Circle from './Components/Circle';
 import Button from './Components/Button';
 import Overlay from './Components/Overlay';
-import React, { Component } from "react";
+import React, { useState, Component } from "react";
 
 class App extends Component {
   state = {
-    value: '',
-    name:'',
     counter: 0,
-    
   };
   // counter +1 
   // coounter
@@ -20,6 +17,9 @@ class App extends Component {
 
      endGame = () => {
       console.log("game Ended");
+      const circle = document.querySelector("circle");
+
+      console.log(circle);
       }
 
      clickHandler = (e) => {
@@ -38,7 +38,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header score={this.state.score}/>
-        <Circle onClick={this.clickHandler}/>
+        <Circle/>
+        <Circle/>
+        <Circle/>
         <Button startGame={this.startGame} endGame={this.endGame}/>
         <Overlay/>
       </div>
